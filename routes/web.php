@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Models\User;
+use App\Models\Product;
 
 /*
 |--------------------------------------------------------------------------
@@ -23,4 +24,10 @@ Route::get('/', function () {
     
     $users = User::all();
     return view('welcome', compact('users'));
+});
+
+Route::get('/product', function () {
+    
+    $products = Product::all();
+    return view('product', compact('products'));
 });
